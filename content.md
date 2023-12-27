@@ -14,20 +14,20 @@
 
 ## Example
 ```
-    class Dog
-        def initialize(name, breed)
-            @name = name
-            @breed = breed
-        end
-    
-        def bark
-            puts "Woof!"
-        end
-
-        def name_breed
-            puts "Name: #{@name}, Breed: #{@breed}
-        end
+class Dog < Animal
+    def initialize(name, breed)
+        @name = name
+        @breed = breed
     end
+    
+    def bark
+        "Woof!"
+    end
+    
+    def to_s
+        "Name: #{@name}, Breed: #{@breed}"
+    end
+end
 ```
 
 - initialize method
@@ -57,10 +57,10 @@
     
     ```
     dog2.bark 
-    -> Woof!
+    -> "Woof!"
 
     dog1.name_breed
-    -> Name: Buddy, Breed: Golden Retriver
+    -> "Name: Buddy, Breed: Golden Retriver"
     ```
 
 
